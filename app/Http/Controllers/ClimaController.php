@@ -37,7 +37,7 @@ class ClimaController extends Controller
 
                 } else {
                     
-                    $response = Http::get("api.openweathermap.org/data/2.5/weather?q={$cidade}&units=metric&appid=052aa4bb9c4cb951d428c008ab04f548");
+                    $response = Http::get("api.openweathermap.org/data/2.5/weather?q={$cidade}&units=metric&appid=*********apikey********");
                     $temp = $response['main']['temp'];
 
                     DB::table('clima')
@@ -49,7 +49,7 @@ class ClimaController extends Controller
 
             } else {  
 
-                $response = Http::get("api.openweathermap.org/data/2.5/weather?q={$cidade}&units=metric&appid=052aa4bb9c4cb951d428c008ab04f548");
+                $response = Http::get("api.openweathermap.org/data/2.5/weather?q={$cidade}&units=metric&appid=**********apikey*************");
                 $city = $response['name'];
                 $temp = $response['main']['temp'];
         
